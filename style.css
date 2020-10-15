@@ -1,0 +1,196 @@
+:root {
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+    --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    background-image: url("/images/bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.icon{
+    background-color: var(--dark-blue);
+    margin: 7em 2em 7em 2em; 
+    padding: 3em;
+    border-radius: 10px 100px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.logo{
+    margin-bottom: 2em;
+}
+
+.icons img{
+    background-color: var(--very-dark-blue);
+    border-radius: 10px;
+    margin: 0.5em;
+    padding: 0.9em;
+    background-size: auto;
+    align-items: center;
+}
+
+.storage{
+    color: white;
+    background-color: var(--dark-blue);
+    width: 80%;
+    margin-top: -5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.storage-text{
+    margin-top: 2em;
+}
+
+.bar{
+    background-color: var(--very-dark-blue);
+    width: 90%;
+    margin-top: 5%;
+    padding: 1%;
+    border-radius: 20px;
+}
+
+.bar .insidebar{
+    border-radius: 20px;
+    width: 81.5%;
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bar .insidebar .whiteball{
+    height: 10px;
+    background-color: white;
+    width: 4%;
+    border-radius: 10px;
+}
+
+.storage-count{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+
+.storage-left{  
+    background-color: white;
+    color: var(--very-dark-blue);
+    padding: 0.6em;
+    margin: -1em;
+    border-radius: 10px;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;  
+}
+
+.storage-left p{
+    text-align: center;
+}
+
+.storage-left .storage-gb-left{
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--grayish-blue); 
+}
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    margin-top: 6em; 
+}
+   
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 750px){
+    body{
+        background-image: url(/images/bg-desktop.png);
+        background-position-y: bottom;
+        background-color: var(--very-dark-blue);
+        background-repeat: repeat-x;
+        background-size: 100vw 50%;
+    }
+
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .icon{
+        width: 20%;
+        margin-top: 17em;
+        margin-right: -8em;
+        margin-left: 8em;
+        padding: 5em;
+    }
+
+    .storage{
+        width: 40%;
+        margin-top: 25em;
+        margin-bottom: 10em;
+        margin-right: -10em;
+        margin-left: 10em;
+        padding: -1em;
+    }
+
+    .storage-text{
+        margin-left: -20em;
+        margin-top: 3em;
+    }
+
+    .bar .insidebar .whiteball{
+        width: 2%;
+    }
+
+    .storage-left{
+        width: 7%;
+        margin-top: -2em;
+        margin-left: -2em;
+        font-size: 20px;
+        padding: 1em;
+        border-radius: 10px 10px 0 10px;
+    }
+
+    .storage-left::before{
+        content: "";
+        background-color: white;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        right: 158px;
+        bottom: 400px;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+}
